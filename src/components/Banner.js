@@ -5,7 +5,12 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { useState, useEffect, useCallback } from "react";
 
-const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+const toRotate = [
+  "Full Stack Developer",
+  "React Developer",
+  "Django Developer",
+  "Backend Engineer"
+];
 const period = 2000;
 
 export const Banner = () => {
@@ -50,7 +55,7 @@ export const Banner = () => {
                   <span className="tagline">Welcome to my Portfolio</span>
 
                   <h1>
-                    Hi! I'm Judy{" "}
+                    Hi! I'm Fortunatus{" "}
                     <span className="txt-rotate">
                       <span className="wrap">{text}</span>
                     </span>

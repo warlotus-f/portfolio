@@ -35,7 +35,7 @@ export const Footer = () => {
               </a>
             </div>
 
-            <p>Copyright 2022. All Rights Reserved</p>
+            <p> © 2026 Fortunatus Portfolio. All Rights Reserved</p>
           </Col>
 
         </Row>

@@ -59,8 +59,9 @@ export const Projects = () => {
                   <h2>Projects</h2>
 
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    <p>
+  A collection of my full-stack development work, including frontend interfaces, backend APIs, and interactive web applications.
+</p>
                   </p>
 
                   <Tab.Container
@@ -114,13 +115,17 @@ export const Projects = () => {
 
                       <Tab.Pane eventKey="second">
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          <p>
+  I enjoy solving real-world problems through code, building scalable systems, and continuously improving my skills in web development and software engineering.
+</p>
                         </p>
                       </Tab.Pane>
 
                       <Tab.Pane eventKey="third">
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          <p>
+  I enjoy solving real-world problems through code, building scalable systems, and continuously improving my skills in web development and software engineering.
+</p>
                         </p>
                       </Tab.Pane>
                     </Tab.Content>
