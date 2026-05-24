@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { useState, useEffect, useCallback, useMemo } from "react";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -12,7 +13,10 @@ export const Banner = () => {
   const [delta, setDelta] = useState(200);
 
   const period = 2000;
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+  const toRotate = useMemo(
+  () => ["Web Developer", "Web Designer", "UI/UX Designer"],
+  []
+);
 
   const tick = useCallback(() => {
     let i = loopNum % toRotate.length;
