@@ -3,7 +3,10 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback } from "react";
+
+const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+const period = 2000;
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -11,34 +14,28 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(200);
 
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
-  const period = 2000;
-
   const tick = useCallback(() => {
-  let i = loopNum % toRotate.length;
-  let fullText = toRotate[i];
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
 
-  let updatedText = isDeleting
-    ? fullText.substring(0, text.length - 1)
-    : fullText.substring(0, text.length + 1);
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
 
-  setText(updatedText);
+    setText(updatedText);
 
-  if (!isDeleting && updatedText === fullText) {
-    setIsDeleting(true);
-    setDelta(period);
-  } else if (isDeleting && updatedText === "") {
-    setIsDeleting(false);
-    setLoopNum((prev) => prev + 1);
-    setDelta(500);
-  }
-}, [loopNum, isDeleting, text, toRotate, period]);
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setDelta(period);
+    } else if (isDeleting && updatedText === "") {
+      setIsDeleting(false);
+      setLoopNum((prev) => prev + 1);
+      setDelta(500);
+    }
+  }, [loopNum, isDeleting, text]);
 
   useEffect(() => {
-    const ticker = setInterval(() => {
-      tick();
-    }, delta);
-
+    const ticker = setInterval(() => tick(), delta);
     return () => clearInterval(ticker);
   }, [tick, delta]);
 
