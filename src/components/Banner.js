@@ -1,9 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from "react-bootstrap-icons";
-import "animate.css";
-import TrackVisibility from "react-on-screen";
+import { ArrowUpRight } from "react-bootstrap-icons";
 import { useState, useEffect, useCallback } from "react";
+import fortuneImage from "../assets/img/fortune.jpeg";
 
 const toRotate = [
   "Full Stack Developer",
@@ -11,19 +9,20 @@ const toRotate = [
   "Django Developer",
   "Backend Engineer"
 ];
+
 const period = 2000;
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(200);
+  const [delta, setDelta] = useState(120);
 
   const tick = useCallback(() => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
+    const i = loopNum % toRotate.length;
+    const fullText = toRotate[i];
 
-    let updatedText = isDeleting
+    const updatedText = isDeleting
       ? fullText.substring(0, text.length - 1)
       : fullText.substring(0, text.length + 1);
 
@@ -35,45 +34,56 @@ export const Banner = () => {
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum((prev) => prev + 1);
-      setDelta(500);
+      setDelta(120);
     }
   }, [loopNum, isDeleting, text]);
 
   useEffect(() => {
-    const ticker = setInterval(() => tick(), delta);
+    const ticker = setInterval(tick, delta);
     return () => clearInterval(ticker);
   }, [tick, delta]);
 
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <span className="tagline">Welcome to my Portfolio</span>
+        <Row className="align-items-center">
+          <Col xs={12} md={8} xl={8}>
+            <div className="banner-content">
 
-                  <h1>
-                    Hi! I'm Fortunatus{" "}
-                    <span className="txt-rotate">
-                      <span className="wrap">{text}</span>
-                    </span>
-                  </h1>
+              <span className="banner-label">WEB DEVELOPER</span>
 
-                  <p>Simple portfolio built with React.</p>
+              <h1>
+                Hi, I'm <span className="accent-text">Fortune.</span>
+              </h1>
 
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
-                </div>
-              )}
-            </TrackVisibility>
+              <h2>
+                <span>{text}</span>
+              </h2>
+
+              <p>
+                I build clean, practical web applications with React,
+                Django, Laravel and modern web technologies.
+              </p>
+
+              <div className="banner-actions">
+                <a href="#projects" className="primary-btn">
+                  View my work
+                  <ArrowUpRight size={18} />
+                </a>
+
+                <a href="#connect" className="secondary-btn">
+                  Let's talk
+                </a>
+              </div>
+
+            </div>
           </Col>
 
-          <Col xs={12} md={6} xl={5}>
-            <img src={headerImg} alt="Header" />
-          </Col>
+          <Col xs={12} md={4} xl={4}>
+          <div className="banner-photo">
+            <img src={fortuneImage} alt="Fortune" />
+          </div>
+        </Col>
         </Row>
       </Container>
     </section>

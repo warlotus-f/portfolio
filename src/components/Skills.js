@@ -1,64 +1,47 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import colorSharp from "../assets/img/color-sharp.png";
-
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
-    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
-    tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
-    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
-  };
+  const skills = [
+    {
+      category: "Frontend",
+      technologies: ["HTML", "CSS", "JavaScript", "React", "Bootstrap"]
+    },
+    {
+      category: "Backend",
+      technologies: ["Python", "Django", "PHP", "Laravel", "REST APIs"]
+    },
+    {
+      category: "Tools",
+      technologies: ["Git", "GitHub", "MySQL", "SQLite", "VS Code"]
+    }
+  ];
 
   return (
     <section className="skill" id="skills">
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="skill-bx wow zoomIn">
-              <h2>Skills</h2>
-              <p>
-                I build responsive and user-friendly web interfaces using modern technologies like React, JavaScript, and Bootstrap. I also explore UI/UX design to improve user experience and create visually appealing websites.
-              </p>
+        <div className="skills-header">
+          <span className="section-label">02 — SKILLS</span>
 
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                className="owl-carousel owl-theme skill-slider"
-              >
-                <div className="item">
-                  <img src={meter1} alt="skill icon" />
-                  <h5>Web Development</h5>
-                </div>
+          <h2>What I work with.</h2>
 
-                <div className="item">
-                  <img src={meter2} alt="skill icon" />
-                  <h5>Brand Identity</h5>
-                </div>
+          <p>
+            Technologies and tools I use to build, develop, and maintain
+            modern web applications.
+          </p>
+        </div>
 
-                <div className="item">
-                  <img src={meter3} alt="skill icon" />
-                  <h5>Logo Design</h5>
-                </div>
+        <div className="skills-grid">
+          {skills.map((skill) => (
+            <div className="skill-group" key={skill.category}>
+              <h3>{skill.category}</h3>
 
-                <div className="item">
-                  <img src={meter1} alt="skill icon" />
-                  <h5>Web Development</h5>
-                </div>
-              </Carousel>
+              <div className="skill-list">
+                {skill.technologies.map((technology) => (
+                  <span key={technology}>{technology}</span>
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-
-      <img
-        className="background-image-left"
-        src={colorSharp}
-        alt="Background decoration"
-      />
     </section>
   );
 };

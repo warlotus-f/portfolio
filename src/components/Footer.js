@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { MailchimpForm } from "./MailchimpForm";
 
 import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
@@ -11,33 +10,47 @@ export const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
-
-          <Col xs={12}>
-            <MailchimpForm />
+          <Col xs={12} md={6}>
+            <img src={logo} alt="Fortune logo" />
           </Col>
 
-          <Col xs={12} sm={6}>
-            <img src={logo} alt="Logo" />
-          </Col>
-
-          <Col xs={12} sm={6} className="text-center text-sm-end">
+          <Col xs={12} md={6} className="text-md-end">
             <div className="social-icon">
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                <img src={navIcon1} alt="LinkedIn" />
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <img src={navIcon1} alt="" />
               </a>
 
-              <a href="https://github.com" target="_blank" rel="noreferrer">
-                <img src={navIcon2} alt="GitHub" />
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <img src={navIcon2} alt="" />
               </a>
 
-              <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                <img src={navIcon3} alt="Twitter" />
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Twitter"
+              >
+                <img src={navIcon3} alt="" />
               </a>
             </div>
-
-            <p> © 2026 Fortunatus Portfolio. All Rights Reserved</p>
           </Col>
 
+          <Col xs={12}>
+            <div className="footer-bottom">
+              <p>© 2026 Fortune. All rights reserved.</p>
+              <p>Designed & built by Fortune.</p>
+            </div>
+          </Col>
         </Row>
       </Container>
     </footer>
