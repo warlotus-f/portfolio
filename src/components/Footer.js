@@ -11,7 +11,7 @@ export const Footer = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6}>
-            <img src={logo} alt="Fortune logo" />
+            <img src={logo} alt="Fortunatus logo" />
           </Col>
 
           <Col xs={12} md={6} className="text-md-end">
@@ -47,8 +47,8 @@ export const Footer = () => {
 
           <Col xs={12}>
             <div className="footer-bottom">
-              <p>© 2026 Fortune. All rights reserved.</p>
-              <p>Designed & built by Fortune.</p>
+              <p>© 2026 Fortunatus. All rights reserved.</p>
+              <p>Designed & built by Fortunatus.</p>
             </div>
           </Col>
         </Row>

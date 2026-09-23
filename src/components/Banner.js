@@ -4,10 +4,10 @@ import { useState, useEffect, useCallback } from "react";
 import fortuneImage from "../assets/img/fortune.jpeg";
 
 const toRotate = [
-  "Full Stack Developer",
-  "React Developer",
-  "Django Developer",
-  "Backend Engineer"
+  "Software Engineer",
+  "Frontend Developer",
+  "Backend Developer",
+  "Full Stack Developer"
 ];
 
 const period = 2000;
@@ -53,7 +53,7 @@ export const Banner = () => {
               <span className="banner-label">WEB DEVELOPER</span>
 
               <h1>
-                Hi, I'm <span className="accent-text">Fortune.</span>
+                Hi, I'm <span className="accent-text">Abiodun-Onajobi Fortunatus.</span>
               </h1>
 
               <h2>
@@ -61,8 +61,7 @@ export const Banner = () => {
               </h2>
 
               <p>
-                I build clean, practical web applications with React,
-                Django, Laravel and modern web technologies.
+                I turn ideas into useful digital products, adapting to the tools and technologies each problem demands.
               </p>
 
               <div className="banner-actions">

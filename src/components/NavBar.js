@@ -23,7 +23,7 @@ export const NavBar = () => {
       <Container>
 
        <Navbar.Brand as={HashLink} to="#home">
-        Fortunatus
+        Abiodun-Onajobi Fortunatus
       </Navbar.Brand>
 
         <Navbar.Toggle />

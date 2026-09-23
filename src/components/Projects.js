@@ -21,7 +21,7 @@ export const Projects = () => {
     },
     {
       title: "us,",
-      description: "A private space for two, where a couple answers a question a day, playsA private space for two, where a couple answers a question a day, plays together and keeps their memories — built so nothing shared arrives before both people are ready for it. together and keeps their memories —built so nothing shared arrives before both people are ready for it.",
+      description: "A private space for two, where a couple answers a question a day, playsA private space for two, where a couple answers a question a day, plays together and keeps their memories built so nothing shared arrives before both people are ready for it.",
       imgUrl: projectImg2,
       technologies: "Django · REST API · JWT",
     },
