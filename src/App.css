@@ -627,9 +627,6 @@ nav.navbar .navbar-toggler-icon::after {
   background: #2B2B28;
 }
 
-.footer img {
-  width: 55px;
-}
 
 .footer .social-icon {
   justify-content: flex-end;
@@ -656,6 +653,12 @@ nav.navbar .navbar-toggler-icon::after {
   margin: 0;
   color: #A8A79F;
   font-size: 12px;
+}
+.footer-logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #C9962C;
+  letter-spacing: -1px;
 }
 
 
