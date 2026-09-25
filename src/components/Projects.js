@@ -8,28 +8,39 @@ import projectImg4 from "../assets/img/vitacore.webp";
 import projectImg5 from "../assets/img/tech and co hub.webp";
 import projectImg6 from "../assets/img/gumed portal.webp";
 import projectImg7 from "../assets/img/locked in.webp";
-import projectImg8 from "../assets/img/lockedin assess.webp";     
+import projectImg8 from "../assets/img/lockedin assess.webp"; 
+import projectImg9 from "../assets/img/ijesa.webp";   
 
 
 export const Projects = () => {
   const projects = [
-    {
-      title: "Mangerine",
-      description: "",
-      imgUrl: projectImg1,
-      technologies: "Laravel · React · SQLite",
-    },
     {
       title: "us,",
       description: "A private space for two, where a couple answers a question a day, playsA private space for two, where a couple answers a question a day, plays together and keeps their memories built so nothing shared arrives before both people are ready for it.",
       imgUrl: projectImg2,
       technologies: "Django · REST API · JWT",
     },
+
+
+    {
+      title: "Mangerine",
+      description: "",
+      imgUrl: projectImg1,
+      technologies: "Laravel · React · SQLite",
+    },
+    
     {
       title: "diana kitchen",
       description: "",
       imgUrl: projectImg3,
       technologies: "Django · Python · PayPal",
+    },
+
+    {
+      title: "Ijesa kingdom league",
+      description: "A home for grassroots football in Ijesaland, bringing league news, matchday information and ways to get involved into one website.",
+      imgUrl: projectImg9,
+      technologies: "Next.js · React", 
     },
     {
       title: "Vitacore",
@@ -61,8 +72,14 @@ export const Projects = () => {
       description: "A browser-based examination and proctoring platform that verifies candidates, preserves session evidence and keeps the final decision with a human reviewer.",
       imgUrl: projectImg8,
       technologies: "React · Web Platform · Browser Media APIs · Vercel",
-    }
-
+    },
+    
+    {
+      title: "Ilesa Tech Community",
+      description: "A technology community connecting developers, creatives and technology enthusiasts in Ilesa.",
+      technologies: "Next.js · React",
+      link: "https://www.ilesa.tech/",
+    },
 
   ];
 

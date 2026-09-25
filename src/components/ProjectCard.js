@@ -5,13 +5,16 @@ export const ProjectCard = ({
   description,
   imgUrl,
   technologies,
+  link,
 }) => {
   return (
     <Col xs={12} sm={6} md={6} lg={6}>
       <div className="project-card">
-        <div className="project-image">
-          <img src={imgUrl} alt={title} />
-        </div>
+        {imgUrl && (
+          <div className="project-image">
+            <img src={imgUrl} alt={title} />
+          </div>
+        )}
 
         <div className="project-info">
           <div>
@@ -22,6 +25,17 @@ export const ProjectCard = ({
           <span className="project-tech">
             {technologies}
           </span>
+
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              View Live Site →
+            </a>
+          )}
         </div>
       </div>
     </Col>
